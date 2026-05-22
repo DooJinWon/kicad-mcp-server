@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "kicad-mcp": {
+      "command": "python3",
+      "args": ["/절대경로/kicad-mcp/server.py"],
+      "env": {}
+    }
+  }
+}
