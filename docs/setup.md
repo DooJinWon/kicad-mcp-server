@@ -4,7 +4,7 @@
 
 [![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://python.org)
 [![KiCad](https://img.shields.io/badge/KiCad-7.x%20%7C%208.x-brightgreen.svg)](https://kicad.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](../LICENSE)
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-zero-green.svg)](#설치)
 
 BOM을 입력하면 회로도 생성 → PCB 자동 배치 → 자동 라우팅 → Gerber 출력까지 Claude와의 대화만으로 완성할 수 있습니다. `pip install` 없이 Python 표준 라이브러리만으로 동작합니다.
@@ -99,7 +99,7 @@ brew install openjdk  # macOS
 ## 파일 구조
 
 ```
-kicad-mcp/
+kicad-mcp-server/
 ├── server.py              # MCP 서버 메인 (18개 도구 정의)
 ├── tools/
 │   ├── schematic.py       # .kicad_sch 생성/수정

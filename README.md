@@ -6,7 +6,7 @@ A Model Context Protocol (MCP) server that exposes KiCad operations to a compati
 
 **Stack:** Python · MCP · KiCad file formats · KiCad CLI · Freerouting integration
 
-[Implementation](kicad-mcp/server.py) · [Detailed documentation](kicad-mcp/README.md) · [Example workflow](kicad-mcp/examples/skin_hydration_example.md)
+[Implementation](server.py) · [Detailed documentation](docs/setup.md) · [Example workflow](examples/skin_hydration_example.md)
 
 ## Architecture
 
@@ -24,11 +24,11 @@ flowchart LR
 
 | Module | Responsibilities |
 | :--- | :--- |
-| [server.py](kicad-mcp/server.py) | MCP tool definitions and request dispatch |
-| [schematic.py](kicad-mcp/tools/schematic.py) | Symbols, wires, power symbols, BOM-driven schematic generation |
-| [pcb_board.py](kicad-mcp/tools/pcb_board.py) | Board editing, component placement, traces |
-| [router.py](kicad-mcp/tools/router.py) | Freerouting integration and fallback routing |
-| [kicad_cli.py](kicad-mcp/tools/kicad_cli.py) | KiCad CLI wrappers for checks and exports |
+| [server.py](server.py) | MCP tool definitions and request dispatch |
+| [schematic.py](tools/schematic.py) | Symbols, wires, power symbols, BOM-driven schematic generation |
+| [pcb_board.py](tools/pcb_board.py) | Board editing, component placement, traces |
+| [router.py](tools/router.py) | Freerouting integration and fallback routing |
+| [kicad_cli.py](tools/kicad_cli.py) | KiCad CLI wrappers for checks and exports |
 
 ## Intended workflow
 
@@ -42,11 +42,11 @@ These are source-level capabilities; the repository does not include a fabricate
 
 ## Getting started
 
-Clone this repository and consult the [setup guide](kicad-mcp/README.md). The implementation and installation scripts live inside the `kicad-mcp/` directory. Review the installation script before running it because it modifies local MCP client configuration.
+Clone this repository and consult the [setup guide](docs/setup.md). The implementation and installation scripts live at the repository root. Review the installation script before running it because it modifies local MCP client configuration.
 
 ```bash
 git clone https://github.com/DooJinWon/kicad-mcp-server.git
-cd kicad-mcp-server/kicad-mcp
+cd kicad-mcp-server
 ```
 
 ## Project status
@@ -55,4 +55,4 @@ Prototype tooling. Generated schematics and layouts require inspection in KiCad;
 
 ## License
 
-See the [MIT license](kicad-mcp/LICENSE).
+See the [MIT license](LICENSE).
